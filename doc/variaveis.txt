@@ -1,0 +1,34 @@
+VM com fila de jobs. Qual nome/endereco e qual usuario?
+VM_SERVIDOR_ESSENCIAL”, no arquivo acessoLibVirt.h.
+
+Comando para ler a fila:
+CONDOR_QUEUE_COMMAND, no arquivo acessoCondorQueue.h.
+
+Contador para levantar vm:
+MAX_COUNT_READER_JOB_WAITING (arquivo acessoCondorQueue.h),
+
+
+Nomes de vms trabalhadoras:
+VM_NOME_INICIO_PADRAO no arquivo acessoLibVirt.h
+
+Comando de historico:
+CONDOR_HISTORY_COMMAND
+
+
+Contador para desativar vm:
+MAX_COUNT_READER_NO_RUNNING_JOBS
+
+
+Minimo de vms em pausa quando nao houver tarefas:
+(a ideia eh manter vms prontas caso aparecam tarefas)
+PAUSED_VM_COUNT_MIN
+
+Habilita ativacao/desativacao de VMs (1 ativado)
+GERENCIA_MAQUINAS_VIRTUAIS
+
+Tempo sleep quando houver ativacao de vm, desativacao ou nada:
+(a ideia: o tempo maior de ativacao de um dominio deve ser considerado para nao haver uma
+segunda execucao do gerenciador e ativar uma outra VM sem necessidade)
+SLEEP_TIME_COM_ATIVACAO_DE_DOMINIO
+SLEEP_TIME_COM_DESATIVACAO_DE_DOMINIO
+SLEEP_TIME_SEM_ACAO
